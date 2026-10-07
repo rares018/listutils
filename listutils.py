@@ -47,8 +47,39 @@ def is_subset(arg1,arg2):  #returns True if all the values in arg1 are also in a
             all_in = False
     
     return all_in
+
+def divs(arg1):   #this one takes intigers,not lists
+    new = []
+    num = 1
+    while num <= arg1:
+        if arg1%num == 0:
+            new.append(num)
+        else:
+            pass
+        num += 1
+    
+    return new
+
+def is_prime(arg1): #needs an int and returns a boolean
+    if arg1 != 1 and divs(arg1) == [1,arg1]:  #NOTE:even if 1 and 0 are mathematically not prime numbers,nor are they composite,if you try this function with 1 or 0,it will return False
+        return True
+    else:
+        return False
+    
+def is_element(arg1,arg2): #arg1:var arg2:list and returns a boolean
+    is_it = False
+    for i in arg2:
+        if arg1 == i:
+            is_it = True
+        else:
+            pass
         
-         
+    return is_it  #is_it means 'is it an element of the list?'
+
+def bcd(arg1,arg2): #bcd stands for 'biggest common divider' also arg1 and arg2 are vars
+    return max(pick(divs(arg1),divs(arg2)))
+    
+    
         
         
     
