@@ -78,7 +78,29 @@ def is_element(arg1,arg2): #arg1:var arg2:list and returns a boolean
 
 def bcd(arg1,arg2): #bcd stands for 'biggest common divider' also arg1 and arg2 are vars
     return max(pick(divs(arg1),divs(arg2)))
+
+
+def sqr(arg1): #sqr means 'square root'
+    x = 0
+    new = 0
+    while x <= arg1:
+        if x ** 2 == arg1:
+            new = x
+            break
+        else:
+            x += 1
+        
+
     
+    return new
+
+
+def issqr(arg1,arg2): #returnes True if the square root of arg1 is arg2 else,returns False
+    sqroot = sqr(arg1)
+    if sqroot == arg2:
+        return True
+    else:
+        return False
     
         
         
