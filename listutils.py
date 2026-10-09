@@ -82,21 +82,13 @@ def bcd(arg1,arg2): #bcd stands for 'biggest common divider' also arg1 and arg2 
 
 def sqr(arg1): #sqr means 'square root'
     x = 0
-    new = 0
-    while x <= arg1:
-        if x ** 2 == arg1:
-            new = x
-            break
-        else:
-            x += 1
-        
-
+    x = arg1 ** 0.5
     
-    return new
+    return x
 
 
 def issqr(arg1,arg2): #returnes True if the square root of arg1 is arg2 else,returns False
-    sqroot = sqr(arg1)
+    sqroot = sqr(arg1)  #also,if you need the square root of a non perfect square number,do issqr(foo,int(bar))
     if sqroot == arg2:
         return True
     else:
