@@ -94,6 +94,19 @@ def issqr(arg1,arg2): #returnes True if the square root of arg1 is arg2 else,ret
     else:
         return False
     
+    
+def mean(arg1):  #arg1 is a list
+    x = 0
+    for i in arg1:
+        x += 1
+    
+    new = sum(arg1)/x
+    return new
+
+
+            
+    
+    
         
         
     
